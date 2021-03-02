@@ -1,6 +1,9 @@
 ---
 title: My title
 description: My description
+github:
+  repository_url: Foo
+  repository_name: Bar
 ---
 
 ## Ozmoo
