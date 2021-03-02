@@ -11,18 +11,19 @@ Ozmoo for Acorn is a port for the 8-bit Acorn computers. It converts a Z-code ga
 
 As an example of what the result looks like, you can try Dave Footitt's [Calypso](https://ifdb.org/viewgame?id=apo771qxl1ba4lsy) running under Ozmoo in your web browser at [bbcmicro.co.uk](http://bbcmicro.co.uk/game.php?id=2575).
 
-# TODO
+# Building a game using Acorn Ozmoo
 
-The code is in my github repository at https://github.com/ZornsLemma/ozmoo. The current release is "4.4 (Acorn 2021-02-18)", which you can download [here](https://github.com/ZornsLemma/ozmoo/releases/tag/acorn-4.4-2021-02-18).
+The code is in my [github repository](https://github.com/ZornsLemma/ozmoo). The current release is "4.4 (Acorn 2021-02-18)", which you can download [here](https://github.com/ZornsLemma/ozmoo/releases/tag/acorn-4.4-2021-02-18).
 
 Building a game with Acorn Ozmoo isn't that difficult, but you do need to be able to use the command line to do it. (*Playing* a game generated with Acorn Ozmoo just involves booting a disc, as you can see from the Calypso example mentioned above.)
 
 You'll need some other software installed on your computer:
-* Python 2 or 3 (https://www.python.org/downloads/)
-* the acme cross-assembler (https://sourceforge.net/projects/acme-crossass/)
-* the lzsa compressor (https://github.com/emmanuel-marty/lzsa)
+* [Python 2 or 3](https://www.python.org/downloads/)
+* the [acme cross-assembler](https://sourceforge.net/projects/acme-crossass/)
+* the [beebasm assembler](https://github.com/stardot/beebasm/) version 1.09 or later
+* the [lzsa compressor](https://github.com/emmanuel-marty/lzsa)
 
-TODO DOWNLOADS FOR WINDOWS
+If you're using Windows, Ken Lowe's post on stardot [here](https://stardot.org.uk/forums/viewtopic.php?p=283858#p283858) includes some pre-built versions of acme, beebasm and lzsa and instructions on how to install them.
 
 Given all that, to convert a Z-code game file into a bootable disc image:
 * Unzip the Acorn Ozmoo release somewhere
@@ -31,7 +32,7 @@ Given all that, to convert a Z-code game file into a bootable disc image:
   ```
   python make-acorn.py -v my-game-file.z5
   ```
-  replacing my-game-file.z5 with the name of the game file, of course.
+  replacing my-game-file.z5 with the name of your game file, of course.
 
 If all goes well, you should end up with a file called my-game-file.ssd or my-game-file.dsd which is a bootable Acorn DFS disc image.
 
