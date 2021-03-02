@@ -26,7 +26,7 @@ You'll need some other software installed on your computer:
 If you're using Windows, Ken Lowe's post on stardot [here](https://stardot.org.uk/forums/viewtopic.php?p=283858#p283858) includes some pre-built versions of acme, beebasm and lzsa and instructions on how to install them.
 
 Given all that, to convert a Z-code game file into a bootable disc image:
-* Unzip the Acorn Ozmoo release somewhere
+* Unzip the Acorn Ozmoo release.
 * Open a command line/terminal window and change into the directory you unzipped the release into.
 * Execute the command
   ```
@@ -38,4 +38,4 @@ If all goes well, you should end up with a file called my-game-file.ssd or my-ga
 
 # Getting help
 
-The best place to ask for help with Acorn Ozmoo is in [this thread](https://stardot.org.uk/forums/viewtopic.php?f=2&t=19975) on stardot.org.uk. I keep an eye on the thread and there are several other regular contributors. Alpha and beta releases are also posted there if you want to experiment with new features and bugs.
+The best place to ask for help with Acorn Ozmoo is in [this thread](https://stardot.org.uk/forums/viewtopic.php?f=2&t=19975) on stardot.org.uk. I keep an eye on it and there are several other regular contributors. Alpha and beta releases are also posted there if you want to experiment with new features and bugs.
