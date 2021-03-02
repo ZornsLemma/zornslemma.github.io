@@ -11,11 +11,16 @@ Ozmoo for Acorn is a port for the 8-bit Acorn computers. It converts a Z-code ga
 
 As an example of what the result looks like, you can try Dave Footitt's [Calypso](https://ifdb.org/viewgame?id=apo771qxl1ba4lsy) running under Ozmoo in your web browser at [bbcmicro.co.uk](http://bbcmicro.co.uk/game.php?id=2575).
 
+![Loader screen](acorn-ozmoo-calypso-loader-extra-16.png)
+![Game in mode 7](acorn-ozmoo-calypso-game-mode-7-extra-16.png)
+
 # Building a game using Acorn Ozmoo
 
 The code is in my [github repository](https://github.com/ZornsLemma/ozmoo). The current release is "4.4 (Acorn 2021-02-18)", which you can download [here](https://github.com/ZornsLemma/ozmoo/releases/tag/acorn-4.4-2021-02-18).
 
 Building a game with Acorn Ozmoo isn't that difficult, but you do need to be able to use the command line to do it. (*Playing* a game generated with Acorn Ozmoo just involves booting a disc, as you can see from the Calypso example mentioned above.)
+
+You need a modern computer to build the game on. I develop Acorn Ozmoo using Linux, but other people have used it on Windows and Mac.
 
 You'll need some other software installed on your computer:
 * [Python 2 or 3](https://www.python.org/downloads/)
