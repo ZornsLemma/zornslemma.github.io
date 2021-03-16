@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Babylon Template</title>
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+            }
+        </style>
+        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+        <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+        <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+    </head>
+   <body>
+    <canvas id="renderCanvas" touch-action="none"></canvas> <!-- touch-action="none" for best results from PEP -->
+    <script>
+        const canvas = document.getElementById("renderCanvas"); // Get the canvas element
+        const engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
+
+	const createScene =  () => {
+	    const scene = new BABYLON.Scene(engine);
+	    const camera = new BABYLON.ArcRotateCamera("camera", Math.PI / 2, Math.PI / 2.5, 500, new BABYLON.Vector3(0, 0, 0));
+	    camera.attachControl(canvas, true);
+	    const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0));
+
+const positions = [
+       0,    0,   64, // Vertex 0
+     -64,   -8,  -32, // Vertex 1
+     -32,    8,  -32, // Vertex 2
+      32,    8,  -32, // Vertex 3
+      64,   -8,  -32, // Vertex 4
+      -4,    4,   16, // Vertex 5
+       4,    4,   16, // Vertex 6
+       8,    3,   28, // Vertex 7
+      -8,    3,   28, // Vertex 8
+     -20,   -4,   16, // Vertex 9
+      20,   -4,   16, // Vertex 10
+     -24,   -7,  -20, // Vertex 11
+     -16,   -7,  -20, // Vertex 12
+      16,   -7,  -20, // Vertex 13
+      24,   -7,  -20, // Vertex 14
+      -8,    4,  -32, // Vertex 15
+       8,    4,  -32, // Vertex 16
+       8,   -4,  -32, // Vertex 17
+      -8,   -4,  -32, // Vertex 18
+     -32,    4,  -32, // Vertex 19
+      32,    4,  -32, // Vertex 20
+      36,   -4,  -32, // Vertex 21
+     -36,   -4,  -32, // Vertex 22
+     -38,    0,  -32, // Vertex 23
+      38,    0,  -32, // Vertex 24
+]
+const positions2 = [
+    new BABYLON.Vector3(0.000000, 0.000000, 64.640000), // Vertex 0
+    new BABYLON.Vector3(-64.640000, -8.080000, -32.320000), // Vertex 1
+    new BABYLON.Vector3(-32.320000, 8.080000, -32.320000), // Vertex 2
+    new BABYLON.Vector3(32.320000, 8.080000, -32.320000), // Vertex 3
+    new BABYLON.Vector3(64.640000, -8.080000, -32.320000), // Vertex 4
+    new BABYLON.Vector3(-4.040000, 4.040000, 16.160000), // Vertex 5
+    new BABYLON.Vector3(4.040000, 4.040000, 16.160000), // Vertex 6
+    new BABYLON.Vector3(8.080000, 3.030000, 28.280000), // Vertex 7
+    new BABYLON.Vector3(-8.080000, 3.030000, 28.280000), // Vertex 8
+    new BABYLON.Vector3(-20.200000, -4.040000, 16.160000), // Vertex 9
+    new BABYLON.Vector3(20.200000, -4.040000, 16.160000), // Vertex 10
+    new BABYLON.Vector3(-24.240000, -7.070000, -20.200000), // Vertex 11
+    new BABYLON.Vector3(-16.160000, -7.070000, -20.200000), // Vertex 12
+    new BABYLON.Vector3(16.160000, -7.070000, -20.200000), // Vertex 13
+    new BABYLON.Vector3(24.240000, -7.070000, -20.200000), // Vertex 14
+    new BABYLON.Vector3(-8.080000, 4.040000, -32.320000), // Vertex 15
+    new BABYLON.Vector3(8.080000, 4.040000, -32.320000), // Vertex 16
+    new BABYLON.Vector3(8.080000, -4.040000, -32.320000), // Vertex 17
+    new BABYLON.Vector3(-8.080000, -4.040000, -32.320000), // Vertex 18
+    new BABYLON.Vector3(-32.320000, 4.040000, -32.320000), // Vertex 19
+    new BABYLON.Vector3(32.320000, 4.040000, -32.320000), // Vertex 20
+    new BABYLON.Vector3(36.360000, -4.040000, -32.320000), // Vertex 21
+    new BABYLON.Vector3(-36.360000, -4.040000, -32.320000), // Vertex 22
+    new BABYLON.Vector3(-38.380000, 0.000000, -32.320000), // Vertex 23
+    new BABYLON.Vector3(38.380000, 0.000000, -32.320000), // Vertex 24
+]
+var indices = [
+    4,1,0, // face 0.0
+    2,3,0, // face 1.0
+    0,1,2, // face 2.0
+    3,4,0, // face 3.0
+    1,4,3, // face 4.0
+    1,3,2, // face 4.1
+]
+
+var customMesh = new BABYLON.Mesh("custom", scene);
+var vertexData = new BABYLON.VertexData();
+vertexData.positions = positions;
+vertexData.indices = indices;
+vertexData.applyToMesh(customMesh);
+
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[4], positions2[1]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[1], positions2[0]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[0], positions2[4]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[2], positions2[3]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[3], positions2[0]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[0], positions2[2]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[0], positions2[1]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[1], positions2[2]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[2], positions2[0]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[3], positions2[4]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[4], positions2[0]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[0], positions2[3]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[1], positions2[4]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[4], positions2[3]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[3], positions2[2]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[2], positions2[1]]});
+lines.color = new BABYLON.Color3(1, 0, 0);
+
+	    return scene;
+	}
+
+        const scene = createScene(); //Call the createScene function
+        // Register a render loop to repeatedly render the scene
+        engine.runRenderLoop(function () {
+                scene.render();
+        });
+        // Watch for browser/canvas resize events
+        window.addEventListener("resize", function () {
+                engine.resize();
+        });
+    </script>
+   </body>
+</html>
+
