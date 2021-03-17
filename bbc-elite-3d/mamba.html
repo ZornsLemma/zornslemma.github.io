@@ -62,39 +62,47 @@ const positions = [
       38,    0,  -32, // Vertex 24
 ]
 const positions2 = [
-    new BABYLON.Vector3(0.000000, 0.000000, 64.640000), // Vertex 0
-    new BABYLON.Vector3(-64.640000, -8.080000, -32.320000), // Vertex 1
-    new BABYLON.Vector3(-32.320000, 8.080000, -32.320000), // Vertex 2
-    new BABYLON.Vector3(32.320000, 8.080000, -32.320000), // Vertex 3
-    new BABYLON.Vector3(64.640000, -8.080000, -32.320000), // Vertex 4
-    new BABYLON.Vector3(-4.040000, 4.040000, 16.160000), // Vertex 5
-    new BABYLON.Vector3(4.040000, 4.040000, 16.160000), // Vertex 6
-    new BABYLON.Vector3(8.080000, 3.030000, 28.280000), // Vertex 7
-    new BABYLON.Vector3(-8.080000, 3.030000, 28.280000), // Vertex 8
-    new BABYLON.Vector3(-20.200000, -4.040000, 16.160000), // Vertex 9
-    new BABYLON.Vector3(20.200000, -4.040000, 16.160000), // Vertex 10
-    new BABYLON.Vector3(-24.240000, -7.070000, -20.200000), // Vertex 11
-    new BABYLON.Vector3(-16.160000, -7.070000, -20.200000), // Vertex 12
-    new BABYLON.Vector3(16.160000, -7.070000, -20.200000), // Vertex 13
-    new BABYLON.Vector3(24.240000, -7.070000, -20.200000), // Vertex 14
-    new BABYLON.Vector3(-8.080000, 4.040000, -32.320000), // Vertex 15
-    new BABYLON.Vector3(8.080000, 4.040000, -32.320000), // Vertex 16
-    new BABYLON.Vector3(8.080000, -4.040000, -32.320000), // Vertex 17
-    new BABYLON.Vector3(-8.080000, -4.040000, -32.320000), // Vertex 18
-    new BABYLON.Vector3(-32.320000, 4.040000, -32.320000), // Vertex 19
-    new BABYLON.Vector3(32.320000, 4.040000, -32.320000), // Vertex 20
-    new BABYLON.Vector3(36.360000, -4.040000, -32.320000), // Vertex 21
-    new BABYLON.Vector3(-36.360000, -4.040000, -32.320000), // Vertex 22
-    new BABYLON.Vector3(-38.380000, 0.000000, -32.320000), // Vertex 23
-    new BABYLON.Vector3(38.380000, 0.000000, -32.320000), // Vertex 24
+    new BABYLON.Vector3(0.000000, 0.000000, 64.000000), // Vertex 0
+    new BABYLON.Vector3(-64.000000, -8.000000, -32.000000), // Vertex 1
+    new BABYLON.Vector3(-32.000000, 8.000000, -32.000000), // Vertex 2
+    new BABYLON.Vector3(32.000000, 8.000000, -32.000000), // Vertex 3
+    new BABYLON.Vector3(64.000000, -8.000000, -32.000000), // Vertex 4
+    new BABYLON.Vector3(-4.000000, 4.000000, 16.000000), // Vertex 5
+    new BABYLON.Vector3(4.000000, 4.000000, 16.000000), // Vertex 6
+    new BABYLON.Vector3(8.000000, 3.000000, 28.000000), // Vertex 7
+    new BABYLON.Vector3(-8.000000, 3.000000, 28.000000), // Vertex 8
+    new BABYLON.Vector3(-20.000000, -4.000000, 16.000000), // Vertex 9
+    new BABYLON.Vector3(20.000000, -4.000000, 16.000000), // Vertex 10
+    new BABYLON.Vector3(-24.000000, -7.000000, -20.000000), // Vertex 11
+    new BABYLON.Vector3(-16.000000, -7.000000, -20.000000), // Vertex 12
+    new BABYLON.Vector3(16.000000, -7.000000, -20.000000), // Vertex 13
+    new BABYLON.Vector3(24.000000, -7.000000, -20.000000), // Vertex 14
+    new BABYLON.Vector3(-8.000000, 4.000000, -32.000000), // Vertex 15
+    new BABYLON.Vector3(8.000000, 4.000000, -32.000000), // Vertex 16
+    new BABYLON.Vector3(8.000000, -4.000000, -32.000000), // Vertex 17
+    new BABYLON.Vector3(-8.000000, -4.000000, -32.000000), // Vertex 18
+    new BABYLON.Vector3(-32.000000, 4.000000, -32.000000), // Vertex 19
+    new BABYLON.Vector3(32.000000, 4.000000, -32.000000), // Vertex 20
+    new BABYLON.Vector3(36.000000, -4.000000, -32.000000), // Vertex 21
+    new BABYLON.Vector3(-36.000000, -4.000000, -32.000000), // Vertex 22
+    new BABYLON.Vector3(-38.000000, 0.000000, -32.000000), // Vertex 23
+    new BABYLON.Vector3(38.000000, 0.000000, -32.000000), // Vertex 24
 ]
 var indices = [
-    4,1,0, // face 0.0
-    2,3,0, // face 1.0
-    0,1,2, // face 2.0
-    3,4,0, // face 3.0
-    1,4,3, // face 4.0
-    1,3,2, // face 4.1
+    10,14,13, // face 0.0.0
+    9,12,11, // face 0.1.0
+    0,4,1, // face 0.2.0
+    0,2,3, // face 1.0.0
+    8,5,6, // face 1.1.0
+    8,6,7, // face 1.1.1
+    0,1,2, // face 2.0.0
+    0,3,4, // face 3.0.0
+    24,20,21, // face 4.0.0
+    19,23,22, // face 4.1.0
+    16,15,18, // face 4.2.0
+    16,18,17, // face 4.2.1
+    1,4,3, // face 4.3.0
+    1,3,2, // face 4.3.1
 ]
 
 var customMesh = new BABYLON.Mesh("custom", scene);
@@ -102,39 +110,146 @@ var vertexData = new BABYLON.VertexData();
 vertexData.positions = positions;
 vertexData.indices = indices;
 vertexData.applyToMesh(customMesh);
+material = new BABYLON.StandardMaterial(scene);
+material.alpha = 0.95;
+customMesh.material = material;
 
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[4], positions2[1]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[1], positions2[0]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[0], positions2[4]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[2], positions2[3]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[3], positions2[0]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[0], positions2[2]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[0], positions2[1]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[1], positions2[2]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[2], positions2[0]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[3], positions2[4]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[4], positions2[0]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[0], positions2[3]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[1], positions2[4]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[4], positions2[3]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[3], positions2[2]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
-lines = BABYLON.MeshBuilder.CreateLines("lines", {points: [positions2[2], positions2[1]]});
-lines.color = new BABYLON.Color3(1, 0, 0);
+wireframeColor = new BABYLON.Color3(1, 0, 0);
+material = new BABYLON.StandardMaterial(scene);
+material.alpha = 1;
+material.emissiveColor = wireframeColor;
+material.disableLighting = true;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[22], positions2[23]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[5], positions2[6]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[19], positions2[22]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[0], positions2[3]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[5], positions2[8]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[1], positions2[2]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[6], positions2[7]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[20], positions2[21]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[9], positions2[11]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[15], positions2[18]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[0], positions2[4]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[17], positions2[18]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[10], positions2[13]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[1], positions2[4]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[2], positions2[3]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[3], positions2[4]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[11], positions2[12]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[16], positions2[17]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[0], positions2[1]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[20], positions2[24]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[13], positions2[14]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[15], positions2[16]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[10], positions2[14]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[21], positions2[24]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[19], positions2[23]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[7], positions2[8]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[0], positions2[2]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: [positions2[9], positions2[12]], radius: 0.250000, tessellation: 8, cap: BABYLON.Mesh.CAP_ALL})
+tube.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[0]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[1]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[2]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[3]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[4]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[5]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[6]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[7]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[8]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[9]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[10]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[11]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[12]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[13]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[14]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[15]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[16]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[17]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[18]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[19]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[20]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[21]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[22]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[23]);
+sphere.material = material;
+sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {segments: 8, diameter: 0.500000});
+sphere.position.addInPlace(positions2[24]);
+sphere.material = material;
 
 	    return scene;
 	}
