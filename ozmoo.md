@@ -16,7 +16,7 @@ As an example of what the result looks like, you can try Dave Footitt's [Calypso
 
 # Building a game using Acorn Ozmoo
 
-The code is in my [github repository](https://github.com/ZornsLemma/ozmoo). The current release is "4.4 (Acorn 2021-02-18)", which you can download [here](https://github.com/ZornsLemma/ozmoo/releases/tag/acorn-4.4-2021-02-18).
+The code is in my [github repository](https://github.com/ZornsLemma/ozmoo). The current stable release is "11.39 (2023-01-15)", which you can download [here](https://github.com/ZornsLemma/ozmoo/releases/tag/acorn-11.39-2023-01-15). The previous stable release was "4.4 (Acorn 2021-02-18)", which you can download [here](https://github.com/ZornsLemma/ozmoo/releases/tag/acorn-4.4-2021-02-18).
 
 Building a game with Acorn Ozmoo isn't that difficult, but you do need to be able to use the command line to do it. (*Playing* a game generated with Acorn Ozmoo just involves booting a disc, as you can see from the Calypso example mentioned above.)
 
