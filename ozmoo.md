@@ -24,8 +24,8 @@ You need a modern computer to build the game on. I develop Acorn Ozmoo using Lin
 
 You'll need some other software installed on your computer:
 * [Python 2 or 3](https://www.python.org/downloads/)
-* the [acme cross-assembler](https://sourceforge.net/projects/acme-crossass/)
-* the [beebasm assembler](https://github.com/stardot/beebasm/) version 1.09 or later
+* the [acme cross-assembler](https://sourceforge.net/projects/acme-crossass/) version 0.97 or later
+* [basictool](https://github.com/ZornsLemma/basictool) version 0.06 or later, *or* the [beebasm assembler](https://github.com/stardot/beebasm/) version 1.09 or later
 * the [lzsa compressor](https://github.com/emmanuel-marty/lzsa)
 
 If you're using Windows, Ken Lowe's post on stardot [here](https://stardot.org.uk/forums/viewtopic.php?p=283858#p283858) includes some pre-built versions of acme, beebasm and lzsa and instructions on how to install them.
