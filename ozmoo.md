@@ -28,7 +28,7 @@ You'll need some other software installed on your computer:
 * [basictool](https://github.com/ZornsLemma/basictool) version 0.06 or later, *or* the [beebasm assembler](https://github.com/stardot/beebasm/) version 1.09 or later
 * the [lzsa compressor](https://github.com/emmanuel-marty/lzsa)
 
-If you're using Windows, Ken Lowe's post on stardot [here](https://stardot.org.uk/forums/viewtopic.php?p=283858#p283858) includes some pre-built versions of acme, beebasm and lzsa and instructions on how to install them.
+If you're using Windows, Ken Lowe's post on stardot [here](https://stardot.org.uk/forums/viewtopic.php?p=283858#p283858) includes some pre-built versions of acme, beebasm, basictool and lzsa and instructions on how to install them.
 
 Given all that, to convert a Z-code game file into a bootable disc image:
 * Unzip the Acorn Ozmoo release.
